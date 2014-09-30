@@ -1,5 +1,7 @@
 \documentclass[twoside,openright,10pt] {book}
 
+\usepackage[draft]{showkeys}
+
 % Setup sprog og orddeling
 \usepackage[danish]{babel}
 \usepackage[applemac]{inputenc}
@@ -18,7 +20,8 @@
 \usepackage{parskip}
 
 %Include graphics and drawing
-\include{graphicx,tikz}
+\usepackage{graphicx,tikz}
+
 
 % Ptovide nice looking tables
 \usepackage{booktabs}
@@ -57,20 +60,62 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+\definecolor{MGB}{HTML}{080a56}
+\definecolor{MGR}{HTML}{e0231b}
+
 %Define fonts
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Arial}
+%\setromanfont[Ligatures=TeX]{Neo Tech Std}
 %vastly improves the standard formatiing
 \usepackage[margin=10pt, font=small, labelfont=bf, labelsep=endash]{caption}
 
+\usepackage{makeidx}
+\makeindex
+
 %Standard titlel og forfatter
-\title{Einsteins Relativitetsteori}
-\author{Thomas Mellergaard Amby\\ - Marselisborg Gymnasium - }
+\title{\fontspec{Neo Tech Std}\color{MGR}\MakeUppercase{Einsteins Relativitetsteori}}
+\author{\color{MGB}Thomas Mellergaard Amby\\ {\small\color{MGB}- Marselisborg Gymnasium - }}
 \date{}
+
+\graphicspath{{Figures/}}
+% ------ Macros ----- %
+\newcommand{\currentchapter}{}
+\let\oldchapter\chapter
+\renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std}#1}\renewcommand{\currentchapter}{#1}}
+
+\newcommand{\currentsection}{}
+\let\oldsection\section
+\renewcommand{\section}[1]{\oldsection{#1}\renewcommand{\currentsection}{#1}}
+
+\newcommand{\currentsubsection}{}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\oldsubsection{#1}\renewcommand{\currentsubsection}{#1}}
+
+\newcommand{\currentsubsubsection}{}
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}[1]{\oldsubsubsection{#1}\renewcommand{\currentsubsubsection}{#1}}
 
 % Put the text in r-header and l-header
 \fancyhead{}
-\rhead{T.M.~Amby}
-\lhead{\chaptermark}
+\fancyhead[LE]{\currentchapter}
+\fancyhead[RO]{\currentsection}
+\fancyhead[RE,LO]{\copyright ~T.M.~Amby}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{Marselisbog Gymnasium 2014}
+\renewcommand{\headrulewidth}{.4pt}
+\renewcommand{\footrulewidth}{.4pt}
 
-\fancyhf[FLE,FRO] {\thepage}
+%Style the chapter
+\usepackage{titlesec,graphics}
+\titleformat{\chapter}[display]
+	{\normalfont\Large\raggedleft}
+	{\color{MGR}\MakeUppercase{\chaptertitlename}%
+		\rlap{ \resizebox{!}{1cm}{\thechapter}  \rule{2cm}{1cm}}}
+		{1pt}{\Huge}
+		
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+	
+
+\usepackage{lipsum}
