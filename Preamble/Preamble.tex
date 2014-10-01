@@ -84,6 +84,7 @@
 \let\oldchapter\chapter
 \renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std}#1}\renewcommand{\currentchapter}{#1}}
 
+
 \newcommand{\currentsection}{}
 \let\oldsection\section
 \renewcommand{\section}[1]{\oldsection{#1}\renewcommand{\currentsection}{#1}}
@@ -117,5 +118,6 @@
 		
 \titlespacing*{\chapter}{0pt}{30pt}{20pt}
 	
+\renewcommand{\eqref}[1]{\eqref{eq:#1}}
 
 \usepackage{lipsum}

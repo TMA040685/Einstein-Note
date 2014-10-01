@@ -1,4 +1,39 @@
 \chapter{Relativistisk Masseforøgelse \& Hastighedsaddition}
 \label{sec:RelativistiskMasseforogelse}
 
-\lipsum
+Vi har i kapitel \ref{sec:LorentzTransformationen} set på hvorledes vi kunne genereliserer Galilei transformationerne\index{transformation!Galilei transformation}, på den generelle form som lever op til det relativistiske princip\index{relativitets princippet} kaldte vi dem for Lorentz transformationer\index{transformation!Lorentz transformation}. Vi skal nu se på hastighedstransformation som følge af Lorentz transformationen. Vi skal nu anvende ligning (\ref{eq:Lx} - \ref{eq:Lt}) til at udlede en relativistisk version af Galilei hastigheds transformationen, se ligning (\ref{eq:Gv}).  
+
+Vi betragter her udelukkende en-dimentionel bevægelse langs x-aksen og anvender begrebet ``{\bf hastighed}'' som en kort form af ``\emph{x-komponenter af hastigheden}.'' Antag at på tiden $dt$ vil en partikel bevæge sig afstanden $dx$, som målt af observatøren i systemet $S$. Vi opnår samhørende værdier for afstand $dx'$ og tid $dt'$ i systemet $S'$. Ved nu at tage differentialerne af ligning (\ref{eq:Lx}) og ligning (\ref{eq:Lt}) finder vi:
+\begin{align}
+	\notag dx' &= \gamma\cdot(dx-u\,dt)\\
+	\notag dt'  &= \gamma\cdot(dt-\frac{u\,dx}{c^2})
+\end{align}
+Divideres disse to ligninger nu med hinanden således at vi får $dx'/dt'$ finder vi:
+\begin{equation*}
+	\frac{dx'}{dt'} = \frac{dx-u\,dt}{dt-\frac{u\,dx}{c^2}}
+\end{equation*}	
+og deles både tæller og nævner i ovenstående resultat nu med $dt$ finder vi følgende:
+\begin{equation*}
+	\frac{dx'}{dt'} = \frac{\frac{dx}{dt}-u}{1-\frac{u}{c^2}\frac{dx}{dt}}
+\end{equation*}
+Afslutningsvis anvender vi vores viden fra Galilei hastigheds transformationen, nemlig at $dx/dt$ er hastigheden $v_x$  i $S$ og at $dx'/dt'$ er hastigheden $v_x'$ i systemet $S'$. Dermed har vi vist den generelle relativistiske hastigheds transformation.
+\begin{equation}
+	\label{eq:Lv}\tag{L.5} v_x' = \frac{v_x -u}{1-\frac{uv_x}{c^2}}
+\end{equation}
+
+Når $u$ og $v_x$ er meget mindre end $c$, vil nævneren i ligning (\ref{eq:Lv}) gå mod 1, og vi vil gå mod et ikke relativistisk resultat hvor $v_x' = v_x -u$. Det modsatte ekstremum hvor $v_x = c$; finder vi derimod:
+\begin{equation*}
+	v_x' = \frac{c-u}{1-\frac{uc}{c^2}} = \frac{c\cdot(1-\frac{u}{c})}{1-\frac{u}{c}} = c
+\end{equation*}
+
+Dette faktum betyder at hvis noget bevæger sig med hastigheden $v_x = c$ målt i systemet $S$ vil hastigheden $v_x' = c$ også hvis den måles i $S'$, uanset den relative bevægelse mellem de to systemer. Dermed er ligning (\ref{eq:lv}) i overenstemmelse med Einsteins postulat om at ``\emph{lysets hastighed i vakuum er den samme i alle initialsystemer}''.
+
+Det relativistiske princip\index{relativitets princippet} fortæller os her at der ikke er nogen fundemental forskel på de to initialsystemer $S$ og $S'$. Derfor må udtrykket for $v_x$, udtrykt ved $v_x'$ have samme form som ligning (\ref{eq:Lv}), med $v_x$ og $v_x'$ byttet om og ligeså med fortegnet på $u$. Gør man dette finder man 
+\begin{equation}
+	\label{eq:Lv2}\tag{L.5.1}v_x = \frac{v_x' -u}{1+\frac{uv_x'}{c^2}}
+\end{equation}
+Både ligning (\ref{eq:Lv}) og ligning (\ref{eq:Lv2}) er Lorentz hastigheds transformationer \index{transformation!Lorentz transformation}. for en-demintionel bevægelse.
+
+Når $u$ er mindre end $c$, fortæller Lorentz hastigheds transformationen os at et objekt som bevæger sig med en fart mindre end $c$ i et initialsystem, vil det samme objekt altid have en far mindre end $c$ i \emph{alle andre} initialsystemer. Heraf kan vi konkludere at intet fysisk objekt kan bevæge sig med fart lig med eller større end lysets i vakuum, relativt til et \emph{vilkårligt} initialsystem. Den relativistiske generelisering af energi\index{energi} og bevægelsesmængde\index{bevægelsesmængde}, som vi senere skal se på vil yderligere underbygge denne konklusion.
+
+\emph{\small Dette afsnit er basseret på \cite{YF2005,Adams1997}.}
