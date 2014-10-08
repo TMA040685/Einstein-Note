@@ -20,7 +20,7 @@
 \usepackage{parskip}
 
 %Include graphics and drawing
-\usepackage{graphicx,tikz}
+\usepackage{graphicx,tikz,SIunits}
 
 
 % Ptovide nice looking tables
@@ -76,13 +76,13 @@
 %Standard titlel og forfatter
 \title{\fontspec{Neo Tech Std}\color{MGR}\MakeUppercase{Einsteins Relativitetsteori}}
 \author{\color{MGB}Thomas Mellergaard Amby\\ {\small\color{MGB}- Marselisborg Gymnasium - }}
-\date{}
+\date{2014}
 
 \graphicspath{{Figures/}}
 % ------ Macros ----- %
 \newcommand{\currentchapter}{}
 \let\oldchapter\chapter
-\renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std}#1}\renewcommand{\currentchapter}{#1}}
+\renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std Light}\MakeUppercase{#1}}\renewcommand{\currentchapter}{#1}}
 
 
 \newcommand{\currentsection}{}
@@ -99,12 +99,12 @@
 
 % Put the text in r-header and l-header
 \fancyhead{}
-\fancyhead[LE]{\currentchapter}
-\fancyhead[RO]{\currentsection}
-\fancyhead[RE,LO]{\copyright ~T.M.~Amby}
+\fancyhead[LE]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\currentchapter}
+\fancyhead[RO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\currentsection}
+\fancyhead[RE,LO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\copyright ~T.M.~Amby}
 \fancyfoot{}
-\fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,RE]{Marselisbog Gymnasium 2014}
+\fancyfoot[LE,RO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\thepage}
+\fancyfoot[LO,RE]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}Marselisbog Gymnasium 2014}
 \renewcommand{\headrulewidth}{.4pt}
 \renewcommand{\footrulewidth}{.4pt}
 
