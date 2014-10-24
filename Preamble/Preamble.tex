@@ -9,9 +9,10 @@
 
 % Setup Math
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{mflogo}
 
 % Allow you to manipulate the page a bit
-\usepackage[a5paper]{geometry}
+\usepackage[margin=1.5cm, a5paper]{geometry}
 
 % Pulls the page out a bit - makes it look better
 %\usepackage{a5wide}
@@ -83,7 +84,7 @@
 % ------ Macros ----- %
 \newcommand{\currentchapter}{}
 \let\oldchapter\chapter
-\renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std Light}\MakeUppercase{#1}}\renewcommand{\currentchapter}{#1}}
+\renewcommand{\chapter}[1]{\oldchapter{\fontspec{Neo Tech Std Light}#1}\renewcommand{\currentchapter}{#1}}
 
 
 \newcommand{\currentsection}{}
@@ -101,23 +102,60 @@
 % Put the text in r-header and l-header
 \fancyhead{}
 \fancyhead[LE]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\currentchapter}
-\fancyhead[RO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\currentsection}
-\fancyhead[RE,LO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\copyright ~T.M.~Amby}
+\fancyhead[RO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}Version 1.0}
+\fancyhead[RE,LO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}2014 \copyright ~T.M.~Amby}
 \fancyfoot{}
 \fancyfoot[LE,RO]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}\thepage}
-\fancyfoot[LO,RE]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}Marselisbog Gymnasium 2014}
+\fancyfoot[LO,RE]{\fontspec[SizeFeatures={Size=8pt}]{Neo Tech Std}Marselisbog Gymnasium}
 \renewcommand{\headrulewidth}{.4pt}
 \renewcommand{\footrulewidth}{.4pt}
 
-%Style the chapter
-\usepackage{titlesec,graphics}
+%% CHAPTER STYLE 1
+\usepackage[explicit]{titlesec}
+\usepackage{minitoc}
+\usepackage{epigraph}
+%\usepackage{xpatch}
+\usepackage{lmodern}
+%
+\newlength\ChapWd
+\settowidth\ChapWd{\huge\chaptertitlename}
+%
 \titleformat{\chapter}[display]
-	{\normalfont\Large\raggedleft}
-	{\color{MGR}\MakeUppercase{\chaptertitlename}%
-		\rlap{ \resizebox{!}{1cm}{\thechapter}  \rule{2cm}{1cm}}}
-		{1pt}{\Huge}
-		
-\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+	{\normalfont\filventer\sffamily}
+	{\tikz[remember picture, overlay]
+		{
+			\node[fill=MGB, font=\fontsize{60}{72}\selectfont\color{white},anchor=north east, minimum size=\ChapWd]
+			at ([xshift=-15pt,yshift=-15pt]current page.north east)
+			(numb) {\thechapter};
+			\node[rotate=90, anchor=south, inner sep=0pt, font=\Huge] at (numb.west) {\chaptertitlename};
+		}
+	}{0pt}{\fontsize{33}{40}\selectfont\color{MGR}#1}[\vskip1pt\centering\Large***]
+	\titlespacing*{\chapter}
+	{0pt}{50pt}{10pt}
+%	
+%
+%\makeatletter
+%\xpatchcmd{\ttl@printlist}{\endgroup}{{\noindent\color{MGB}\rule{\textwidth}{1.5pt}}\vskip30pt\endgroup}{}{}
+%\makeatother
+
+%\newcommand\DoPToC{%
+%\startcontents[chapters]
+%\printcontents[chapters]{}{1}{\noindent{\color{MGB}\rule{\textwidth}{1.5pt}}\par\medskip}%
+%}
+
+%\setlength\epigraphrule{0pt}
+%\renewcommand\textflush{flushright}
+%\renewcommand\epigraphsize{\normalsize\itshape}	
+
+%Style the chapter
+%\usepackage{graphics}
+%\titleformat{\chapter}[display]
+%	{\normalfont\Large\raggedleft}
+%	{\color{MGR}\MakeUppercase{\chaptertitlename}%
+%		\rlap{ \resizebox{!}{1cm}{\thechapter}  \rule{2cm}{1cm}}}
+%		{1pt}{\Huge}
+%		
+%\titlespacing*{\chapter}{0pt}{30pt}{20pt}
 	
 %\renewcommand{\eqref}[1]{\eqref{eq:#1}}
 

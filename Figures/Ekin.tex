@@ -1,11 +1,9 @@
-\documentclass[10pt]{article}
-\usepackage[usenames]{color} %used for font color
-\usepackage{amssymb} %maths
-\usepackage{amsmath} %maths
-\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
-\begin{document}
-\[% GNUPLOT: LaTeX picture with Postscript
+% GNUPLOT: LaTeX picture with Postscript
 \begingroup
+  % Encoding inside the plot.  In the header of your document, this encoding
+  % should to defined, e.g., by using
+  % \usepackage[latin1,<other encodings>]{inputenc}
+  \inputencoding{latin1}%
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -26,7 +24,7 @@
   \providecommand\rotatebox[2]{#2}%
   \@ifundefined{ifGPcolor}{%
     \newif\ifGPcolor
-    \GPcolorfalse
+    \GPcolortrue
   }{}%
   \@ifundefined{ifGPblacktext}{%
     \newif\ifGPblacktext
@@ -81,36 +79,33 @@
   \begin{picture}(7200.00,5040.00)%
     \gplgaddtomacro\gplbacktext{%
       \csname LTb\endcsname%
-      \put(1531,704){\makebox(0,0)[r]{\strut{} 0}}%
-      \put(1531,1518){\makebox(0,0)[r]{\strut{} 1}}%
-      \put(1531,2332){\makebox(0,0)[r]{\strut{} 2}}%
-      \put(1531,3147){\makebox(0,0)[r]{\strut{} 3}}%
-      \put(1531,3961){\makebox(0,0)[r]{\strut{} 4}}%
-      \put(1531,4775){\makebox(0,0)[r]{\strut{} 5}}%
-      \put(1663,484){\makebox(0,0){\strut{} 0}}%
-      \put(2070,484){\makebox(0,0){\strut{} 0.1}}%
-      \put(2477,484){\makebox(0,0){\strut{} 0.2}}%
-      \put(2884,484){\makebox(0,0){\strut{} 0.3}}%
-      \put(3291,484){\makebox(0,0){\strut{} 0.4}}%
-      \put(3699,484){\makebox(0,0){\strut{} 0.5}}%
-      \put(4106,484){\makebox(0,0){\strut{} 0.6}}%
-      \put(4513,484){\makebox(0,0){\strut{} 0.7}}%
-      \put(4920,484){\makebox(0,0){\strut{} 0.8}}%
-      \put(5327,484){\makebox(0,0){\strut{} 0.9}}%
-      \put(5734,484){\makebox(0,0){\strut{} 1}}%
-      \put(1289,2739){\rotatebox{-270}{\makebox(0,0){\strut{}Kinetisk Energi}}}%
-      \put(3698,154){\makebox(0,0){\strut{}Hastighed [1/c]}}%
+      \put(1773,704){\makebox(0,0)[r]{\strut{} 0}}%
+      \put(1773,1383){\makebox(0,0)[r]{\strut{} 0.5}}%
+      \put(1773,2061){\makebox(0,0)[r]{\strut{} 1}}%
+      \put(1773,2740){\makebox(0,0)[r]{\strut{} 1.5}}%
+      \put(1773,3418){\makebox(0,0)[r]{\strut{} 2}}%
+      \put(1773,4097){\makebox(0,0)[r]{\strut{} 2.5}}%
+      \put(1773,4775){\makebox(0,0)[r]{\strut{} 3}}%
+      \put(1905,484){\makebox(0,0){\strut{} 0}}%
+      \put(2414,484){\makebox(0,0){\strut{} 0.5}}%
+      \put(2923,484){\makebox(0,0){\strut{} 1}}%
+      \put(3432,484){\makebox(0,0){\strut{} 1.5}}%
+      \put(3941,484){\makebox(0,0){\strut{} 2}}%
+      \put(4449,484){\makebox(0,0){\strut{} 2.5}}%
+      \put(4958,484){\makebox(0,0){\strut{} 3}}%
+      \put(5467,484){\makebox(0,0){\strut{} 3.5}}%
+      \put(5976,484){\makebox(0,0){\strut{} 4}}%
+      \put(1003,2739){\rotatebox{-270}{\makebox(0,0){\strut{}Hastighed [1/c]}}}%
+      \put(3940,154){\makebox(0,0){\strut{}Kinetisk Energi}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%
-      \put(4747,4602){\makebox(0,0)[r]{\strut{}Klassisk}}%
+      \put(4989,4602){\makebox(0,0)[r]{\strut{}Klassisk}}%
       \csname LTb\endcsname%
-      \put(4747,4382){\makebox(0,0)[r]{\strut{}Relativistisk}}%
+      \put(4989,4382){\makebox(0,0)[r]{\strut{}Relativistisk}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{Figures/Ekin}}%
     \gplfronttext
   \end{picture}%
 \endgroup
-\]
-\end{document}

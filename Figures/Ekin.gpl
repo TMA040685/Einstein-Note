@@ -1,0 +1,31 @@
+# Vi plotter Ekin figuren!
+
+set term x11
+
+set encoding iso_8859_1
+set size 1,1
+set size square
+set key box
+
+
+
+set xr [0:4]
+set yl "Hastighed [1/c]"
+set mxtics 5
+set xl "Kinetisk Energi"
+set mytics 5
+blue = "#000FF"; red = "#FF0000"
+#f(x) = 0.5*m*x*x
+#g(x) = (1/sqrt(1-(x*x/1*1))-1)*m*1*1
+f(x) = sqrt(2*x/m)
+g(x) = sqrt(2*x+x*x)/(1*m+x)
+m = 1;
+
+plot f(x) w l lt -1 lc rgb blue lw 2 title "Klassisk",\
+g(x) w l lt -1 lc rgb red lw 2 title "Relativistisk"
+
+
+set term postscript enhanced color font "Helvetica"
+set output "Ekin1.eps"
+replot 
+unset output

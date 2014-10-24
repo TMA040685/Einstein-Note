@@ -1,9 +1,11 @@
-%!PS-Adobe-2.0 EPSF-2.0
-%%Title: Ekin.tex
+%!PS-Adobe-2.0
+%%Title: Ekin.eps
 %%Creator: gnuplot 4.4 patchlevel 3
-%%CreationDate: Thu Oct  9 19:49:20 2014
-%%DocumentFonts: 
-%%BoundingBox: 50 50 410 302
+%%CreationDate: Wed Oct 22 09:44:12 2014
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
 %%EndComments
 %%BeginProlog
 /gnudict 256 dict def
@@ -12,11 +14,11 @@ gnudict begin
 % The following true/false flags may be edited by hand if desired.
 % The unit line width and grayscale image gamma correction may also be changed.
 %
-/Color false def
-/Blacktext true def
+/Color true def
+/Blacktext false def
 /Solid false def
 /Dashlength 1 def
-/Landscape false def
+/Landscape true def
 /Level1 false def
 /Rounded false def
 /ClipToBoundingBox false def
@@ -25,7 +27,7 @@ gnudict begin
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
 %
-/vshift -73 def
+/vshift -46 def
 /dl1 {
   10.0 Dashlength mul mul
   Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
@@ -44,19 +46,19 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (Ekin.tex)
+  /Title (Ekin.eps)
   /Subject (gnuplot plot)
   /Creator (gnuplot 4.4 patchlevel 3)
   /Author (mggym)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Thu Oct  9 19:49:20 2014)
+  /CreationDate (Wed Oct 22 09:44:12 2014)
   /DOCINFO pdfmark
 end
 } ifelse
 /doclip {
   ClipToBoundingBox {
-    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
     clip
   } if
 } def
@@ -433,432 +435,749 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
+%
+% Encoding for ISO-8859-1 (also called Latin1)
+%
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ifelse } forall
+currentdict /CharStrings known {
+	CharStrings /Idieresis known {
+		/Encoding ISOLatin1Encoding def } if
+} if
+currentdict end definefont
+} def
+/ISOLatin1Encoding [
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+/Arial reencodeISO def
 end
 %%EndProlog
+%%Page: 1 1
 gnudict begin
 gsave
 doclip
 50 50 translate
-0.050 0.050 scale
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
 0 setgray
 newpath
-1.500 UL
+(Arial) findfont 140 scalefont setfont
+1.000 UL
 LTb
-1663 704 M
+1605 448 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 908 M
+stroke
+1521 448 M
+[ [(Arial) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 595 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 1111 M
+1605 743 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 1315 M
+1605 890 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 1518 M
+1605 1038 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 1185 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 1722 M
+stroke
+1521 1185 M
+[ [(Arial) 140.0 0.0 true true 0 ( 0.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 1333 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 1925 M
+1605 1480 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 2129 M
+1605 1627 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 2332 M
+1605 1775 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 1922 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 2536 M
+stroke
+1521 1922 M
+[ [(Arial) 140.0 0.0 true true 0 ( 1)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 2070 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 2740 M
+1605 2217 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 2943 M
+1605 2365 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 3147 M
+1605 2512 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 2660 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 3350 M
+stroke
+1521 2660 M
+[ [(Arial) 140.0 0.0 true true 0 ( 1.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 2807 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 3554 M
+1605 2954 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 3757 M
+1605 3102 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 3961 M
+1605 3249 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 3397 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 4164 M
+stroke
+1521 3397 M
+[ [(Arial) 140.0 0.0 true true 0 ( 2)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 3544 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 4368 M
+1605 3692 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 4571 M
+1605 3839 M
 31 0 V
-4040 0 R
+4392 0 R
 -31 0 V
-1663 4775 M
+1605 3986 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 4134 M
 63 0 V
-4008 0 R
+4360 0 R
 -63 0 V
-1663 704 M
+stroke
+1521 4134 M
+[ [(Arial) 140.0 0.0 true true 0 ( 2.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 4281 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 4429 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 4576 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 4724 M
+31 0 V
+4392 0 R
+-31 0 V
+1605 4871 M
+63 0 V
+4360 0 R
+-63 0 V
+stroke
+1521 4871 M
+[ [(Arial) 140.0 0.0 true true 0 ( 3)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1605 448 M
 0 63 V
-0 4008 R
-0 -63 V
-1867 704 M
-0 31 V
-0 4040 R
-0 -31 V
-2070 704 M
-0 63 V
-0 4008 R
-0 -63 V
-2274 704 M
-0 31 V
-0 4040 R
-0 -31 V
-2477 704 M
-0 63 V
-0 4008 R
-0 -63 V
-2681 704 M
-0 31 V
-stroke 2681 735 M
-0 4040 R
-0 -31 V
-2884 704 M
-0 63 V
-0 4008 R
-0 -63 V
-3088 704 M
-0 31 V
-0 4040 R
-0 -31 V
-3291 704 M
-0 63 V
-0 4008 R
-0 -63 V
-3495 704 M
-0 31 V
-0 4040 R
-0 -31 V
-3699 704 M
-0 63 V
-0 4008 R
-0 -63 V
-3902 704 M
-0 31 V
-0 4040 R
-0 -31 V
-4106 704 M
-0 63 V
-0 4008 R
-0 -63 V
-4309 704 M
-0 31 V
-0 4040 R
-0 -31 V
-4513 704 M
-0 63 V
-0 4008 R
-0 -63 V
-4716 704 M
-0 31 V
-0 4040 R
-0 -31 V
-4920 704 M
-0 63 V
-0 4008 R
-0 -63 V
-5123 704 M
-0 31 V
-0 4040 R
-0 -31 V
-5327 704 M
-0 63 V
-0 4008 R
-0 -63 V
-5530 704 M
-0 31 V
-0 4040 R
-0 -31 V
-5734 704 M
-0 63 V
-0 4008 R
+0 4360 R
 0 -63 V
 stroke
-1663 4775 N
-0 -4071 V
-4071 0 V
-0 4071 V
--4071 0 V
-Z stroke
-1.000 UP
-1.500 UL
+1605 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+1716 448 M
+0 31 V
+0 4392 R
+0 -31 V
+1826 448 M
+0 31 V
+0 4392 R
+0 -31 V
+1937 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2047 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2158 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+2158 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 0.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+2268 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2379 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2490 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2600 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2711 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+2711 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 1)]
+] -46.7 MCshow
+1.000 UL
+LTb
+2821 448 M
+0 31 V
+0 4392 R
+0 -31 V
+2932 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3042 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3153 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3264 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+3264 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 1.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3374 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3485 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3595 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3706 448 M
+0 31 V
+0 4392 R
+0 -31 V
+3817 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+3817 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 2)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3927 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4038 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4148 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4259 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4369 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+4369 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 2.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+4480 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4591 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4701 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4812 448 M
+0 31 V
+0 4392 R
+0 -31 V
+4922 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+4922 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 3)]
+] -46.7 MCshow
+1.000 UL
+LTb
+5033 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5143 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5254 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5365 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5475 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+5475 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 3.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+5586 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5696 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5807 448 M
+0 31 V
+0 4392 R
+0 -31 V
+5917 448 M
+0 31 V
+0 4392 R
+0 -31 V
+6028 448 M
+0 63 V
+0 4360 R
+0 -63 V
+stroke
+6028 308 M
+[ [(Arial) 140.0 0.0 true true 0 ( 4)]
+] -46.7 MCshow
+1.000 UL
 LTb
 1.000 UL
 LTb
-3031 4272 N
-0 440 V
-2571 0 V
-0 -440 V
--2571 0 V
+1605 4871 N
+0 -4423 V
+4423 0 V
+0 4423 V
+-4423 0 V
 Z stroke
-3031 4712 M
-2571 0 V
-stroke
-3.000 UL
-LT0
-0.00 0.38 0.68 C LTb
-LT0
-0.00 0.38 0.68 C 4879 4602 M
-591 0 V
-1663 704 M
-41 0 V
-41 0 V
-41 0 V
-41 1 V
-42 0 V
-41 0 V
-41 1 V
-41 1 V
-41 0 V
-41 1 V
-41 1 V
-41 1 V
-42 1 V
-41 1 V
-41 1 V
-41 2 V
-41 1 V
-41 1 V
-41 2 V
-41 2 V
-42 1 V
-41 2 V
-41 2 V
-41 2 V
-41 2 V
-41 2 V
-41 2 V
-41 3 V
-42 2 V
-41 2 V
-41 3 V
-41 3 V
-41 2 V
-41 3 V
-41 3 V
-41 3 V
-41 3 V
-42 3 V
-41 3 V
-41 3 V
-41 4 V
-41 3 V
-41 4 V
-41 3 V
-41 4 V
-42 4 V
-41 4 V
-41 4 V
-41 4 V
-41 4 V
-41 4 V
-41 4 V
-41 5 V
-42 4 V
-41 5 V
-41 4 V
-41 5 V
-41 5 V
-41 5 V
-41 5 V
-41 5 V
-42 5 V
-41 5 V
-41 5 V
-41 5 V
-41 6 V
-41 5 V
-41 6 V
-41 6 V
-41 6 V
-42 5 V
-41 6 V
-41 6 V
-41 6 V
-41 7 V
-41 6 V
-41 6 V
-41 7 V
-42 6 V
-41 7 V
-41 7 V
-41 6 V
-41 7 V
-41 7 V
-41 7 V
-41 7 V
-42 7 V
-41 8 V
-41 7 V
-41 7 V
-41 8 V
-41 8 V
-41 7 V
-41 8 V
-42 8 V
-41 8 V
-41 8 V
-41 8 V
-41 8 V
-stroke
-LT0
-0.87 0.09 0.12 C LTb
-LT0
-0.87 0.09 0.12 C 4879 4382 M
-591 0 V
-1663 704 M
-41 0 V
-41 0 V
-41 0 V
-41 1 V
-42 0 V
-41 0 V
-41 1 V
-41 1 V
-41 0 V
-41 1 V
-41 1 V
-41 1 V
-42 1 V
-41 1 V
-41 2 V
-41 1 V
-41 1 V
-41 2 V
-41 1 V
-41 2 V
-42 2 V
-41 2 V
-41 2 V
-41 2 V
-41 2 V
-41 3 V
-41 2 V
-41 3 V
-42 2 V
-41 3 V
-41 3 V
-41 3 V
-41 3 V
-41 4 V
-41 3 V
-41 4 V
-41 4 V
-42 4 V
-41 4 V
-41 4 V
-41 4 V
-41 5 V
-41 5 V
-41 5 V
-41 5 V
-42 5 V
-41 6 V
-41 6 V
-41 6 V
-41 6 V
-41 7 V
-41 7 V
-41 7 V
-42 7 V
-41 8 V
-41 8 V
-41 9 V
-41 8 V
-41 10 V
-41 9 V
-41 11 V
-42 10 V
-41 11 V
-41 12 V
-41 12 V
-41 13 V
-41 14 V
-41 14 V
-41 15 V
-41 16 V
-42 17 V
-41 18 V
-41 19 V
-41 20 V
-41 22 V
-41 23 V
-41 25 V
-41 27 V
-42 29 V
-41 31 V
-41 34 V
-41 37 V
-41 41 V
-41 44 V
-41 50 V
-41 55 V
-42 63 V
-41 71 V
-41 82 V
-41 95 V
-41 113 V
-41 137 V
-41 171 V
-41 220 V
-42 298 V
-41 439 V
-41 739 V
-20 814 V
-stroke
-1.500 UL
+LCb setrgbcolor
+1031 2659 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Arial) 140.0 0.0 true true 0 (Hastighed [1/c])]
+] -46.7 MCshow
+grestore
 LTb
-1663 4775 N
-0 -4071 V
-4071 0 V
-0 4071 V
--4071 0 V
+LCb setrgbcolor
+3816 98 M
+[ [(Arial) 140.0 0.0 true true 0 (Kinetisk Energi)]
+] -46.7 MCshow
+LTb
+1.000 UP
+1.000 UL
+LTb
+1.000 UL
+LTb
+4285 4528 N
+0 280 V
+1659 0 V
+0 -280 V
+-1659 0 V
+Z stroke
+4285 4808 M
+1659 0 V
+% Begin plot #1
+stroke
+2.000 UL
+LTb
+0.00 0.00 1.00 C LCb setrgbcolor
+5377 4738 M
+[ [(Arial) 140.0 0.0 true true 0 (Klassisk)]
+] -46.7 MRshow
+LTb
+0.00 0.00 1.00 C 5461 4738 M
+399 0 V
+1605 448 M
+45 419 V
+44 174 V
+45 133 V
+45 112 V
+44 99 V
+45 90 V
+45 82 V
+44 76 V
+45 72 V
+45 68 V
+44 65 V
+45 62 V
+45 59 V
+44 57 V
+45 55 V
+45 53 V
+45 52 V
+44 50 V
+45 49 V
+45 47 V
+44 47 V
+45 45 V
+45 44 V
+44 43 V
+45 43 V
+45 41 V
+44 41 V
+45 40 V
+45 39 V
+44 39 V
+45 37 V
+45 38 V
+44 37 V
+45 36 V
+45 35 V
+44 36 V
+45 34 V
+45 35 V
+44 33 V
+45 34 V
+45 33 V
+44 32 V
+45 32 V
+45 32 V
+44 31 V
+45 32 V
+45 30 V
+44 31 V
+45 30 V
+45 30 V
+45 29 V
+44 29 V
+45 29 V
+45 29 V
+44 28 V
+45 28 V
+45 28 V
+44 28 V
+45 27 V
+45 27 V
+44 27 V
+45 27 V
+45 27 V
+44 26 V
+45 26 V
+45 26 V
+44 26 V
+45 25 V
+45 25 V
+44 25 V
+45 25 V
+45 25 V
+44 25 V
+45 24 V
+45 25 V
+44 24 V
+45 24 V
+45 23 V
+44 24 V
+45 24 V
+45 23 V
+44 23 V
+45 23 V
+45 23 V
+45 23 V
+44 23 V
+45 22 V
+45 23 V
+44 22 V
+45 22 V
+45 22 V
+44 22 V
+45 22 V
+45 21 V
+44 22 V
+45 21 V
+45 22 V
+44 21 V
+45 21 V
+% End plot #1
+% Begin plot #2
+stroke
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+5377 4598 M
+[ [(Arial) 140.0 0.0 true true 0 (Relativistisk)]
+] -46.7 MRshow
+LTb
+1.00 0.00 0.00 C 5461 4598 M
+399 0 V
+1605 448 M
+45 407 V
+44 152 V
+45 108 V
+45 83 V
+44 68 V
+45 57 V
+45 48 V
+44 43 V
+45 36 V
+45 33 V
+44 29 V
+45 26 V
+45 23 V
+44 21 V
+45 20 V
+45 17 V
+45 16 V
+44 15 V
+45 14 V
+45 12 V
+44 12 V
+45 11 V
+45 10 V
+44 9 V
+45 9 V
+45 8 V
+44 8 V
+45 7 V
+45 7 V
+44 6 V
+45 6 V
+45 6 V
+44 5 V
+45 5 V
+45 5 V
+44 4 V
+45 5 V
+45 4 V
+44 4 V
+45 3 V
+45 4 V
+44 3 V
+45 3 V
+45 3 V
+44 3 V
+45 3 V
+45 3 V
+44 2 V
+45 3 V
+45 2 V
+45 2 V
+44 3 V
+45 2 V
+45 2 V
+44 2 V
+45 1 V
+45 2 V
+44 2 V
+45 1 V
+45 2 V
+44 2 V
+45 1 V
+45 1 V
+44 2 V
+45 1 V
+45 1 V
+44 2 V
+45 1 V
+45 1 V
+44 1 V
+45 1 V
+45 1 V
+44 1 V
+45 1 V
+45 1 V
+44 1 V
+45 1 V
+45 1 V
+44 1 V
+45 1 V
+45 0 V
+44 1 V
+45 1 V
+45 1 V
+45 0 V
+44 1 V
+45 1 V
+45 0 V
+44 1 V
+45 1 V
+45 0 V
+44 1 V
+45 0 V
+45 1 V
+44 1 V
+45 0 V
+45 1 V
+44 0 V
+45 1 V
+% End plot #2
+stroke
+1.000 UL
+LTb
+1605 4871 N
+0 -4423 V
+4423 0 V
+0 4423 V
+-4423 0 V
 Z stroke
 1.000 UP
-1.500 UL
+1.000 UL
 LTb
 stroke
 grestore
 end
 showpage
 %%Trailer
+%%DocumentFonts: Arial
+%%Pages: 1
