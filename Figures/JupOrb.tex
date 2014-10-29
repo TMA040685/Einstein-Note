@@ -1,0 +1,22 @@
+	\begin{tikzpicture}[scale=.6]
+		%\draw[lightgray, step=1mm] (0,0) grid (7,7);
+		%\draw[gray, step=5mm] (0,0) grid (7,7);
+		%\draw[darkgray, step=10mm] (0,0) grid (7,7);
+		
+
+		
+		\filldraw[fill=black,draw=black] (3.5,3.5) circle (.5mm) node[right] {$S$};
+		\draw (3.5,3.5) circle (7mm);
+		\draw (3.5,3.5) circle (35mm);
+		\draw[dashed, thick] (3.5,4.2) -- (3.5, 7);
+		\draw[dashed, thick] (3.5,2.8) -- (2.5,6.85);
+		\filldraw[fill=black, draw=black] (3.5,4.2) circle (.5mm);
+		\filldraw[fill=black, draw=black] (3.5,2.8) circle (.5mm) node[below] {$E_{2}$};
+		\filldraw[fill=black, draw=black] (3.5,7) circle (.5mm) node[above] {$J_{1}$};
+		\filldraw[fill=black, draw=black] (2.5,6.85) circle (.5mm) node[above] {$J_{2}$};
+		\node[right] at (3.5,4.3) {$E_{1}$};
+		\draw[->] (4.2,3.5) arc (0:180:7mm);
+		\draw[->] (2.8,3.5) arc (-180:0:7mm);
+		\draw[->] (7,3.5) arc (	0:99:35mm);
+		
+	\end{tikzpicture}

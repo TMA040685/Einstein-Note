@@ -21,7 +21,8 @@ f(x) = sqrt(2*x/m)
 g(x) = sqrt(2*x+x*x)/(1*m+x)
 m = 1;
 
-plot f(x) w l lt -1 lc rgb blue lw 2 title "Klassisk",\
+plot 1 w l ls 2 lc rgb "#000000" lw 2 notitle,\
+f(x) w l lt -1 lc rgb blue lw 2 title "Klassisk",\
 g(x) w l lt -1 lc rgb red lw 2 title "Relativistisk"
 
 
